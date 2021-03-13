@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background2" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <Button android:id="@id/TextBackup" android:background="@drawable/backselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="20.0dip" />
+        <Button android:id="@id/clearAllData" android:background="@drawable/all_clear_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/TextBackup" android:layout_alignTop="@id/TextBackup" android:layout_marginStart="20.0dip" />
+        <TextView android:textSize="50.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/textTitle" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/otherset_title" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/btnQuery" android:background="@drawable/btnqueryselector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/TextBackup" android:layout_alignParentRight="true" android:layout_marginEnd="20.0dip" />
+        <Button android:id="@id/btnExport" android:background="@drawable/export_record_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/btnQuery" android:layout_alignTop="@id/TextBackup" android:layout_marginEnd="20.0dip" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/frame_shape" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:layout_weight="6.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6">
+            <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/textStartDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="开始日期:" />
+            <EditText android:textSize="22.0sp" android:textColor="#ff0093dd" android:layout_gravity="center" android:id="@id/editStartDate" android:background="@android:drawable/edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="0.7" android:inputType="date" />
+            <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:gravity="center|right" android:id="@id/textEndDate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="结束日期:" android:layout_weight="0.6" />
+            <EditText android:textSize="22.0sp" android:textColor="#ff0093dd" android:id="@id/editEndDate" android:background="@android:drawable/edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="0.7" android:inputType="date" />
+            <Button android:textSize="22.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/realCondition" android:background="@drawable/button_normal_background" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="80.0sp" android:layout_marginRight="30.0sp" android:text=" 请选择查询条件  " android:onClick="condition" />
+            <EditText android:textSize="22.0sp" android:textColor="#ff0093dd" android:id="@id/editNameOrID" android:background="@android:drawable/edit_text" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:hint="请输入或者直接刷身份证" android:singleLine="true" android:layout_weight="1.5" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ageQueryLayout" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:layout_weight="1.5">
+                <EditText android:textSize="22.0sp" android:textColor="#ff0093dd" android:layout_gravity="center" android:id="@id/editStartBirth" android:background="@android:drawable/edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="开始" android:singleLine="true" android:layout_weight="0.8" android:inputType="date" />
+                <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="0.1" />
+                <EditText android:textSize="22.0sp" android:textColor="#ff0093dd" android:layout_gravity="center" android:id="@id/editEndBirth" android:background="@android:drawable/edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="结束" android:singleLine="true" android:layout_weight="0.8" android:inputType="date" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ff696969" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="6.2">
+            <ListView android:id="@id/dataList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.3">
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/text1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/use_company" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/text2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/technical_support" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/text3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/telephone" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

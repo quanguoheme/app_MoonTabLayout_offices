@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/id_show_bg" android:paddingLeft="55.0dip" android:paddingTop="10.0dip" android:paddingBottom="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="5.0dip" android:paddingTop="20.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.5">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.8">
+            <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/nameShow" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/sexShow" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/birthShow" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:id="@id/addShow" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.6" />
+        </LinearLayout>
+        <ImageView android:id="@id/id_imgShow" android:layout_width="0.0dip" android:layout_height="110.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/id_noShow" android:paddingLeft="45.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginRight="15.0dip" android:layout_weight="1.0" />
+</LinearLayout>

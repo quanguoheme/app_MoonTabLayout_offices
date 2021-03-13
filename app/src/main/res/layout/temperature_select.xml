@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/temperature_bg" android:layout_width="1018.0dip" android:layout_height="592.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/btnConfirm" android:background="@drawable/yes_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginStart="20.0dip" />
+    <GridView android:id="@id/gridview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" android:stretchMode="columnWidth" android:columnWidth="10.0dip" android:numColumns="4" />
+</LinearLayout>

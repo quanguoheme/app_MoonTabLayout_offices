@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/validate_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:clickable="true" android:layout_width="75.0dip" android:layout_height="75.0dip" android:src="@drawable/fail_flag" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff376c8f" android:gravity="center" android:id="@id/advancedTips" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="30.0dip">
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="200.0dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:id="@id/sharkLayout" android:background="@drawable/frame_red_shape" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="5.0dip">
+                <TextView android:textSize="23.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/textRemind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="年龄限制、不予登记" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="200.0dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip">
+                <include layout="@layout/id_show_layout" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btn_layout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="20.0sp" android:layout_gravity="center" android:id="@id/btnAdvancedSave" android:background="@drawable/identi_ok_selector" android:layout_width="120.0dip" android:layout_height="40.0dip" android:text="确    认" />
+    </LinearLayout>
+</LinearLayout>
