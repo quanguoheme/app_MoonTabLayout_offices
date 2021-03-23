@@ -58,5 +58,34 @@ public class TabLayoutActivity extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mViewPager);
         //给TabLayout设置适配器
         mTabLayout.setTabsFromPagerAdapter(mFragmentAdapteradapter);
+
+        initFruits();
+    }
+
+    private List<Fruit> fruitList = new ArrayList<>();
+    private void initFruits() {
+        for (int i = 0; i < 2; i++) {
+            Fruit apple = new Fruit("Apple", R.drawable.person_add);
+            fruitList.add(apple);
+            Fruit banana = new Fruit("Banana", R.drawable.person_delete);
+            fruitList.add(banana);
+            Fruit orange = new Fruit("Orange", R.drawable.person_update);
+            fruitList.add(orange);
+            Fruit watermelon = new Fruit("Watermelon", R.drawable.person_add);
+            fruitList.add(watermelon);
+            Fruit pear = new Fruit("Pear", R.drawable.person_delete);
+            fruitList.add(pear);
+            Fruit grape = new Fruit("Grape", R.drawable.person_update);
+            fruitList.add(grape);
+            Fruit pineapple = new Fruit("Pineapple", R.drawable.person_add);
+            fruitList.add(pineapple);
+            Fruit strawberry = new Fruit("Strawberry", R.drawable.person_delete);
+            fruitList.add(strawberry);
+            Fruit cherry = new Fruit("Cherry", R.drawable.person_add);
+            fruitList.add(cherry);
+            Fruit mango = new Fruit("Mango", R.drawable.person_add);
+            fruitList.add(mango);
+
+        }
     }
 }
