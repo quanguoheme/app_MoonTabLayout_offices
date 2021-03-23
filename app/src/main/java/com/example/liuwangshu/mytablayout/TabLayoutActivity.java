@@ -20,8 +20,8 @@ public class TabLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_layout);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         initViewPager();
     }
@@ -30,7 +30,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
         List<String> titles = new ArrayList<>();
         titles.add("精选");
-        titles.add("体育");
+        /*titles.add("体育");
         titles.add("巴萨");
         titles.add("购物");
         titles.add("明星");
@@ -41,7 +41,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         titles.add("本地");
         titles.add("动漫");
         titles.add("搞笑");
-        titles.add("精选");
+        titles.add("精选");*/
 
         for (int i = 0; i < titles.size(); i++) {
             mTabLayout.addTab(mTabLayout.newTab().setText(titles.get(i)));
